@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Athenea 172 | El Rito Primordial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --azul-frances: #0b2c5f;
+      --oro-masonico: #c5a059;
+      --blanco-marmol: #fcfcfc;
+      --gris-piedra: #2c2c2c;
+    }
+
+    * { box-sizing: border-box; }
+    
+    body {
+      margin: 0;
+      font-family: 'Lora', serif;
+      background: var(--blanco-marmol);
+      color: var(--gris-piedra);
+      line-height: 1.8;
+    }
+
+    /* Navegación Sublime */
+    header {
+      background: var(--azul-frances);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 3px solid var(--oro-masonico);
+    }
+
+    header h1 {
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--oro-masonico);
+    }
+
+    header p {
+      font-style: italic;
+      letter-spacing: 1px;
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    nav { margin-top: 30px; }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-family: 'Cinzel', serif;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--oro-masonico); }
+
+    /* Hero: El despertar de la conciencia */
+    .hero {
+      background: linear-gradient(rgba(11, 44, 95, 0.85), rgba(11, 44, 95, 0.85)), 
+                  url("https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600") center/cover;
+      color: white;
+      padding: 150px 20px;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+    }
+
+    .hero h2 { 
+      font-family: 'Cinzel', serif;
+      font-size: 3rem; 
+      margin-bottom: 20px;
+      color: var(--oro-masonico);
+    }
+
+    .hero p { 
+      max-width: 800px; 
+      margin: auto; 
+      font-size: 1.4rem; 
+      font-style: italic;
+    }
+
+    /* Secciones de Contenido */
+    .section { padding: 100px 20px; text-align: center; }
+    .container { max-width: 900px; margin: auto; }
+
+    h2.section-title {
+      font-family: 'Cinzel', serif;
+      color: var(--azul-frances);
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    h2.section-title::after {
+      content: " \2234 "; /* Símbolo masónico de los tres puntos */
+      display: block;
+      font-size: 1.5rem;
+      color: var(--oro-masonico);
+      margin-top: 10px;
+    }
+
+    .sublime-text {
+      font-size: 1.2rem;
+      text-align: justify;
+      color: #444;
+    }
+
+    /* Cuadrícula de Valores */
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 30px; 
+      margin-top: 50px; 
+    }
+
+    .card { 
+      background: white; 
+      padding: 40px 20px; 
+      border: 1px solid #eee;
+      border-top: 4px solid var(--oro-masonico);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+
+    .card strong { 
+      font-family: 'Cinzel', serif; 
+      display: block; 
+      font-size: 1.2rem; 
+      margin-bottom: 15px;
+      color: var(--azul-frances);
+    }
+
+    /* Contacto: La llamada al Taller */
+    .contact { 
+      background: var(--azul-frances); 
+      color: white; 
+      padding: 100px 20px; 
+      clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    .contact h2 { color: var(--oro-masonico); font-family: 'Cinzel', serif; }
+
+    input, textarea { 
+      width: 100%; padding: 15px; margin-top: 15px; 
+      border-radius: 0; border: none; font-family: 'Lora', serif;
+      background: rgba(255,255,255,0.9);
+    }
+
+    button { 
+      margin-top: 30px; padding: 15px 40px; 
+      background: var(--oro-masonico); color: var(--azul-frances); 
+      border: none; font-family: 'Cinzel', serif; font-weight: bold; 
+      cursor: pointer; letter-spacing: 2px;
+    }
+
+    footer { 
+      background: #051630; color: rgba(255,255,255,0.5); 
+      text-align: center; padding: 40px; font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 { font-size: 1.8rem; }
+      .hero h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Athenea 172</h1>
+    <p>Custodios del Rito Primordial · Logia de Perfección</p>
+    <nav>
+      <a href="#inicio">El Umbral</a>
+      <a href="#athenea">La Logia</a>
+      <a href="#masoneria">El Método</a>
+      <a href="#valores">Las Luces</a>
+      <a href="#contacto">Llamar a la Puerta</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+    <h2>Donde el Silencio se hace Palabra y Donde el Verbo se hace Carne</h2>
+    <p>"No buscamos solo hombres buenos, buscamos forjar Arquitectos de su propio destino bajo la luz de la Razón y el Honor."</p>
+  </section>
+
+  <section class="section" id="athenea">
+    <div class="container">
+      <h2 class="section-title">La Respetable Logia Athenea 172</h2>
+      <div class="sublime-text">
+        <p>
+          En el corazón de nuestro Taller, el tiempo se detiene para dar paso a lo eterno. Athenea 172 no es solo una reunión de hombres; es un crisol donde la **Tradición Ilustrada de 1785** recobra vida. Aquí, cada mazo que golpea y cada palabra que se vierte en el silencio sagrado busca una sola cosa: transformar el plomo de la ignorancia en el oro de la sabiduría.
+        </p>
+        <p>
+          Bajo la obediencia de la Masonería Regular, trabajamos el **Rito Francés Moderno** con el rigor que exige nuestra historia y la fraternidad que dicta nuestro corazón. Somos buscadores incansables de la Verdad, unidos por un juramento que trasciende lo material.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: #f4f6fa;" id="masoneria">
+    <div class="container">
+      <h2 class="section-title">Nuestra Masonería: Arquitectura del Alma</h2>
+      <div class="sublime-text">
+        <p>
+          Nuestra labor no se escribe en libros, se graba en la conciencia. Herederos del *Régulateur du Maçon*, utilizamos el símbolo no como un adorno, sino como la clave para descifrar los misterios del ser humano y del universo. 
+        </p>
+        <p>
+          En Athenea 172, la Masonería es un ejercicio de **Libertad absoluta**, una práctica de **Igualdad inquebrantable** y un compromiso de **Fraternidad universal**. No somos una sociedad de socorros, sino una escuela de pensamiento donde la rectitud de la Escuadra y la amplitud del Compás guían cada uno de nuestros pasos hacia la construcción del Templo de la Humanidad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="valores">
+    <div class="container">
+      <h2 class="section-title">Las Grandes Luces de nuestro Rito</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>Honor</strong>
+          Es la espada que custodia nuestra palabra y la rectitud que gobierna nuestros actos.
+        </div>
+        <div class="card">
+          <strong>Razón</strong>
+          La luz que disipa las tinieblas del fanatismo y nos permite leer el Libro de la Naturaleza.
+        </div>
+        <div class="card">
+          <strong>Progreso</strong>
+          El deber ineludible de dejar el mundo mejor de como lo encontramos al nacer.
+        </div>
+        <div class="card">
+          <strong>Silencio</strong>
+          El espacio sagrado donde la reflexión madura y la verdad se revela al espíritu.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container">
+      <h2>¿Buscas la Luz?</h2>
+      <p>Si sientes un llamado de tu búsqueda interior y el compromiso con la virtud, nuestras puertas pueden abrirse para ti.</p>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Vuestro Nombre" required />
+        <input type="email" name="email" placeholder="Vuestro Correo Electrónico" required />
+        <textarea name="message" rows="5" placeholder="¿Qué buscáis en los misterios de la Masonería?" required></textarea>
+        <button type="submit">Presentar Petición</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Bajo los Auspicios de la Gran Logia de España / Grande Oriente Español</p>
+    <p>© 2026  · Athenea 172 · Rito Francés Moderno</p>
+  </footer>
+
+</body>
+</html>
